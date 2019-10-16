@@ -7,6 +7,8 @@ for (let index = 0; index < lineCount; index++) {
         console.log("%".repeat(lineCount));
     } else {
         console.log("%" + ' '.repeat(lineCount - 2) + "%");
+        let index = [1];
+        index.reverse()
     }
 }
 

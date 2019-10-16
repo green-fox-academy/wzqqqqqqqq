@@ -3,7 +3,7 @@
 let animals = ['dog', 'cat', 'kitten'];
 
 for (let index = 0; index < animals.length; index++) {
-   animals[index]= animals[index]+"s";
+   animals[index] = animals[index] + "s";
 }
 
 console.log(animals);

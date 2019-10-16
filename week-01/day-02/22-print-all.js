@@ -1,6 +1,6 @@
 'use strict';
 
-let a = [4,5,6,7]
+let a = [4, 5, 6, 7]
 
 for (let index = 0; index < a.length; index++) {
    console.log(a[index]);

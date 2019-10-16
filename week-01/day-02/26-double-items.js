@@ -1,9 +1,9 @@
 'use strict';
 
-let ag =['Gin', 'Whiskey', 'Wine', 'Beer'];
+let ag = ['Gin', 'Whiskey', 'Wine', 'Beer'];
 
-ag.forEach((e,i)=>{
-  ag[i]=ag[i].repeat(2);
+ag.forEach((e, i) => {
+  ag[i] = ag[i].repeat(2);
 })
 
 console.log(ag);

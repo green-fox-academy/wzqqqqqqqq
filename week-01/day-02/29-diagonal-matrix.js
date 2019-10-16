@@ -1,10 +1,9 @@
 'use strict';
 
 function print2DList(a) {
-    for (let index = 1; index <= a; index++) 
-    {
-      console.log('0 '.repeat(a-index)+'1'+' 0'.repeat(index-1));
-    }
+  for (let index = 1; index <= a; index++) {
+    console.log('0 '.repeat(a - index) + '1' + ' 0'.repeat(index - 1));
+  }
 }
 
 print2DList(4);
