@@ -1,19 +1,19 @@
 'use strict';
 
 const mapWith = (array, callback) => {
-    let output = [];
+  let output = [];
 
-    // The mapWith() function should iterate over the given array and call the callback function on every element.
-    // It stores the callback return values in the output.
-    // The mapWith() should return with the output array.
-    array.forEach(a => {
-        output.push(callback(a));
-    });
-    return output;
+  // The mapWith() function should iterate over the given array and call the callback function on every element.
+  // It stores the callback return values in the output.
+  // The mapWith() should return with the output array.
+  array.forEach(a => {
+    output.push(callback(a));
+  });
+  return output;
 }
 
 const addOne = (number) => {
-    return number + 1;
+  return number + 1;
 }
 
 // Exercise 1:
@@ -28,14 +28,14 @@ console.log(mapWith([1, 2, 3], addOne));
 const words = ['map', 'reduce', 'filter'];
 
 const removeSecondLetter = (word) => {
-    var str = '';
-    word = word.split("");
-    for (let i = 0; i < word.length; i++) {
-        if (i % 2 == 0) {
-            str = str + word[i];
-        }
+  var str = '';
+  word = word.split("");
+  for (let i = 0; i < word.length; i++) {
+    if (i % 2 == 0) {
+      str = str + word[i];
     }
-    return str;
+  }
+  return str;
 }
 
 console.log(mapWith(words, removeSecondLetter));
