@@ -1,6 +1,7 @@
 // Arrow function
 // Write a function call in the commented area with an old anonym function and an arrow function.
 // Both anonym functions functions should take a number parameter and return it's square value.
+'user strict';
 
 function multiPurposeFunction(action) {
   if (action) {

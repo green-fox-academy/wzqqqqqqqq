@@ -1,6 +1,7 @@
 // Write with both technologies a class that's named Garden,
 //  has width and length as fields and the following functions: area(), circumference() and efficiency(). 
 // The function called efficiency should return the result of area() / circumference().
+'user strict';
 
 function Garden(width, length) {
   this.width = width;
@@ -23,3 +24,5 @@ const garden = new Garden(2, 3);
 console.log(garden.area());
 console.log(garden.circumference());
 console.log(garden.efficiency());
+
+module.exports = Garden ;

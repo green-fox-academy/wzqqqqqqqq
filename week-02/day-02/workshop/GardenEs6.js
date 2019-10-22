@@ -1,3 +1,4 @@
+'user strict';
 class Garden{
   constructor(width = 0 , length = 0){
     this.width = width;
