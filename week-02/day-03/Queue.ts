@@ -1,3 +1,4 @@
+'user strict';
 import { interfaceQueue } from "./Interface";
 
 class Queue implements interfaceQueue {

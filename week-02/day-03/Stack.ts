@@ -1,3 +1,4 @@
+'user strict';
 import { interfaceStack } from "./Interface";
 
 class Stack implements interfaceStack {
