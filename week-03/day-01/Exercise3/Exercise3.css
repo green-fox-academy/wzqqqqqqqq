@@ -1,0 +1,23 @@
+html {
+    font-size: 36px;
+    color: white;
+}
+
+.container div {
+    text-align: center;
+    padding: 50px;
+}
+
+.container {
+    width: 300px;
+    padding: 15px;
+    background-color: #4185f1;
+}
+
+#north {
+    background-color: #e67676;
+}
+
+#south {
+    background-color: #a9e6e6;
+}
