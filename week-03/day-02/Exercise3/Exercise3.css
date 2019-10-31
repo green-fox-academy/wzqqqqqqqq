@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 .container {
   height: 280px;
   width: 100%;
@@ -12,25 +7,26 @@
   align-items: center;
 }
 
-.container .item {
-  height: 108px;
-  width: 108px;
+ .item {
+  height: 100px;
+  width: 100px;
   background-color:rgb(176, 42, 255);
 }
 
-.exercise-1 {
-  justify-content: flex-start;
-}
-
-.exercise-1 .item {
+ .item {
   margin-right: 7px;
 }
 
-.exercise-2 {
+.e1 {
+  justify-content: flex-start;
+}
+
+.e2 {
   justify-content: space-between;
 }
 
-.exercise-3 {
+.e3
+{
   align-items: flex-end;
   justify-content: flex-end;
 }
