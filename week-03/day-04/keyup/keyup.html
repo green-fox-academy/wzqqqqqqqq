@@ -7,8 +7,8 @@
   <body>
     <h1>No last pressed key</h1>
     <script>
-        window.addEventListener('keyup', (e) => {
-      document.querySelector('h1').innerText = `Last pressed key is:    ${e.code}`
+        window.addEventListener('keyup', (key) => {
+      document.querySelector('h1').innerText = `Last pressed key is:    ${key.code}`
     })
      
       </script>
