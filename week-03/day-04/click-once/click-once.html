@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Workshop: EventListeners</title>
+</head>
+
+<body>
+    <button>Click me</button>
+    <button id='button2'>click me too</button>
+    <script>
+        let logTime = function() {
+            this.onclick = undefined;
+            console.log(Date.now());
+        }
+        document.querySelector('button').onclick = logTime;
+
+        let logTime2 = function() {
+            console.log(Date.now());
+            this.removeEventListener('click', logTime2);
+        }
+        document.querySelector('#button2').addEventListener('click', logTime2);
+    </script>
+
+
+</body></html>
