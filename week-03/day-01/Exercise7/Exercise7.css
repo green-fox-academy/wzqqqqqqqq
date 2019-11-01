@@ -1,16 +1,11 @@
-
 .big {
-    color: blue;
+  color: blue;
 }
 
 .container .asteroid {
-    border: 1px green solid;
+  border: 1px green solid;
 }
 
-p.asteroid{
- background-color: yellow;
+p.asteroid {
+  background-color: yellow;
 }
-
-
-
-

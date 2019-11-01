@@ -1,19 +1,19 @@
 .container {
   height: 280px;
   width: 100%;
-  background:rgb(255, 214, 42);
+  background: rgb(255, 214, 42);
   display: flex;
-  list-style-type:none;
+  list-style-type: none;
   align-items: center;
 }
 
- .item {
+.item {
   height: 100px;
   width: 100px;
-  background-color:rgb(176, 42, 255);
+  background-color: rgb(176, 42, 255);
 }
 
- .item {
+.item {
   margin-right: 7px;
 }
 
@@ -25,8 +25,7 @@
   justify-content: space-between;
 }
 
-.e3
-{
+.e3 {
   align-items: flex-end;
   justify-content: flex-end;
 }

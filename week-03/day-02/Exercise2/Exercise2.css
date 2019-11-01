@@ -1,5 +1,5 @@
 .container {
-  background:rgb(255, 214, 42);
+  background: rgb(255, 214, 42);
   width: 700px;
   height: 250px;
   display: flex;
@@ -13,5 +13,5 @@
 }
 
 .purple {
-  background-color:rgb(176, 42, 255);
+  background-color: rgb(176, 42, 255);
 }

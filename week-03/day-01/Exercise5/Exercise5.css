@@ -1,24 +1,25 @@
     h1 {
-        color: rgb(2, 2, 235);
+      color: rgb(2, 2, 235);
     }
 
     h2 {
-        color: rgb(243, 172, 33);
+      color: rgb(243, 172, 33);
     }
 
     body ul {
-        color: rgb(2, 2, 235);
-        list-style-type: square;
+      color: rgb(2, 2, 235);
+      list-style-type: square;
     }
 
     ul ul {
-        list-style-type: disc;
+      list-style-type: disc;
     }
 
-    ul ul,ul ol {
-        color: black;
+    ul ul,
+    ul ol {
+      color: black;
     }
 
     #apple {
-        color: red;
+      color: red;
     }

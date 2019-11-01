@@ -1,29 +1,29 @@
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .item {
-    align-self: flex-end;
-    display: flex;
-    width: 180px;
-    height: 180px;
+  align-self: flex-end;
+  display: flex;
+  width: 180px;
+  height: 180px;
 }
 
 .green {
-    background: rgb(81, 212, 0);
-    flex: 1;
+  background: rgb(81, 212, 0);
+  flex: 1;
 
 }
 
 .yellow {
-    background: rgb(255, 214, 42);
-    flex: 2;
+  background: rgb(255, 214, 42);
+  flex: 2;
 
 }
 
 .purple {
-    background: rgb(176, 42, 255);
-    flex: 1;
+  background: rgb(176, 42, 255);
+  flex: 1;
 }
