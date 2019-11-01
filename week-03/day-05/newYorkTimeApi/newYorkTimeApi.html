@@ -1,0 +1,76 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>New York Time Api</title>
+</head>
+
+<body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script>
+    var docFrag = document.createDocumentFragment();
+    for (var i = 0; i < 10; i++) {
+      var headLine = document.createElement('h2');
+      var headLineTitle = document.createElement('h1');
+      var snippetTitle = document.createElement('h1');
+      var snippet = document.createElement('h2');
+      var publicationDateTitle = document.createElement('h1');
+      var publicationDate = document.createElement('h2');
+
+      headLineTitle.id = 'headlineTitle';
+      headLineTitle.innerHTML = 'Headline:';
+      headLine.type = 'h2';
+      headLine.id = `headline${i}`;
+
+      snippetTitle.id = 'snippetTitle';
+      snippetTitle.innerHTML = 'Snippet:';
+      snippet.type = 'h2';
+      snippet.id = `snippet${i}`;
+
+      publicationDateTitle.id = 'publicationDate';
+      publicationDateTitle.innerHTML = 'Publication Date:';
+      publicationDate.type = 'h2';
+      publicationDate.id = `publicationDate${i}`;
+
+      docFrag.appendChild(headLineTitle);
+      docFrag.appendChild(headLine);
+      
+      docFrag.appendChild(snippetTitle);
+      docFrag.appendChild(snippet);
+
+      docFrag.appendChild(publicationDateTitle);
+      docFrag.appendChild(publicationDate);
+
+      document.body.appendChild(headLineTitle);
+      document.body.appendChild(headLine);
+      document.body.appendChild(snippetTitle);
+      document.body.appendChild(snippet);
+    
+
+      document.body.appendChild(docFrag);
+      document.write("<br>"); 
+    }
+    
+  </script>
+  <script>
+    const url =
+      'https://api.nytimes.com/svc/search/v2/articlesearch.json?q=moon%20landing%20by%20Apollo%2011&api-key=Oe48KsTa2Nyddvf3gJgbZfXMpJfp1dP2';
+    $.ajax({
+      url: url,
+      method: 'GET',
+    }).done(function (result) {
+
+      for (let index = 0; index < result.response.docs.length; index++) {
+        document.getElementById(`headline${index}`).innerHTML = result.response.docs[index].headline.main;
+        document.getElementById(`snippet${index}`).innerHTML = result.response.docs[index].snippet;
+        document.getElementById(`publicationDate${index}`).innerHTML = (new Date(result.response.docs[index].pub_date))
+          .toLocaleDateString();
+      }
+    }).fail(function (error) {
+      throw err;
+    });
+  </script>
+</body>
+
+
+</html>
