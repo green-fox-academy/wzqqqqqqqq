@@ -1,18 +1,20 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter, Route } from "react-router-dom";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
 
 import HelloWorld from "./components/HelloWorld";
 import Error from "./components/Error";
+import Undefined from "./components/Undefined";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
+    <BrowserRouter>
+      <Switch>
         <Route path="/" component={HelloWorld} exact />
         <Route path="/error" component={Error} />
-      </BrowserRouter>
-    </div>
+        <Route component={Undefined} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 
