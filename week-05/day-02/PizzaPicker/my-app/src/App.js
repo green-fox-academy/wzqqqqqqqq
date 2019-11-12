@@ -9,7 +9,7 @@ class App extends Component {
 			topping1: true,
 			topping2: true,
 			topping3: true,
-			cut: "cut"
+			cut: "true"
 		};
 		this.handleChange = this.handleChange.bind(this);
 	}
