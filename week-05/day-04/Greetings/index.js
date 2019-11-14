@@ -10,7 +10,7 @@ app.set("view engine", "ejs");
 app.get("/", (req, res) => {
   // render `home.ejs`
   let { name } = req.query;
-  let user = name !== undefined ? name : "guest";
+  let user = name !== undefined ? name : "Guest";
   res.render("home", { title: `Welcome back, ${user}` });
 });
 // app.get("/?name=:name", (req, res) => {
