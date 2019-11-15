@@ -22,6 +22,27 @@ app.get("/doubling", (req, res) => {
   }
 });
 
+app.get("/greeter", (req, res) => {
+  const { name, title } = req.query;
+  if (name && title) {
+    res.send({
+      welcome_message: `Oh, hi there ${name}, my dear ${title}!`,
+    });
+  } else if (name) {
+    res.send({
+      error: "Please provide a title!",
+    });
+  } else if (title) {
+    res.send({
+      error: "Please provide a name!",
+    });
+  } else {
+    res.send({
+      error: "Please provide a name and a title!",
+    });
+  }
+});
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
