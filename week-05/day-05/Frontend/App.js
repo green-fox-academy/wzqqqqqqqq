@@ -4,7 +4,7 @@ const express = require("express");
 const path = require("path");
 
 const app = express();
-const PORT = 3000;
+const PORT = 8080;
 
 app.use(express.json());
 app.use(express.static("assets"));
@@ -26,19 +26,58 @@ app.get("/greeter", (req, res) => {
   const { name, title } = req.query;
   if (name && title) {
     res.send({
-      welcome_message: `Oh, hi there ${name}, my dear ${title}!`,
+      welcome_message: `Oh, hi there ${name}, my dear ${title}!`
     });
   } else if (name) {
     res.send({
-      error: "Please provide a title!",
+      error: "Please provide a title!"
     });
   } else if (title) {
     res.send({
-      error: "Please provide a name!",
+      error: "Please provide a name!"
     });
   } else {
     res.send({
-      error: "Please provide a name and a title!",
+      error: "Please provide a name and a title!"
+    });
+  }
+});
+
+app.get("/appenda/:appendable", (req, res) => {
+  const { appendable } = req.params;
+  res.send({ appended: `${appendable}a` });
+});
+
+function rFact(num) {
+  if (num === 0) {
+    return 1;
+  } else {
+    return num * rFact(num - 1);
+  }
+}
+
+app.post("/dountil/:action", (req, res) => {
+  const { action } = req.params;
+  let { until } = req.body;
+  until = parseInt(until, 10);
+
+  if (until) {
+    if (action === "sum") {
+      res.send({
+        result: (until + 1) * (until / 2)
+      });
+    } else if (action === "factor") {
+      res.send({
+        result: rFact(until)
+      });
+    } else {
+      res.send({
+        result: "No such action."
+      });
+    }
+  } else {
+    res.send({
+      result: "Please provide a number."
     });
   }
 });
