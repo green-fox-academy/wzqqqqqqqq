@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="">
+    <title>Cocktails</title>
+</head>
+<body>
+<h1>Cocktails</h1>
+<%- include('navigation.ejs') %>
+<table>
+    <thead>
+    <tr>
+        <th>NAME</th>
+        <th>PRICE</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% cocktails.map((cocktail) => { %>
+        <tr>
+            <td>
+                <p>
+                    <%= cocktail.name %>
+                    <% if(!cocktail.isAlcoholic == true){ %>
+                        <span>(non-alcoholic)</span>
+                    <% } %>
+                </p>
+                <p><%= cocktail.contains %></p>
+            </td>
+            <td>
+                <h2><%= cocktail.price %></h2>
+            </td>
+        </tr>
+    <% }) %>
+    </tbody>
+</table>
+</body>
+</html>

@@ -7,7 +7,7 @@ const app = express();
 const PORT = 8080;
 
 app.use(express.json());
-app.use(express.static("assets"));
+app.use(express.static("view"));
 
 app.get("/", (req, res) => res.sendFile(path.join(__dirname, "index.html")));
 
