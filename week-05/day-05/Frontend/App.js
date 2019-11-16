@@ -82,6 +82,26 @@ app.post("/dountil/:action", (req, res) => {
   }
 });
 
+app.post("/arrays",(req,res)=>{
+  const {what,numbers} = req.body;
+  let result = null;
+
+  switch (what) {
+    case 'sum':
+      result = {result: numbers.reduce((a,b)=>a+b)};
+      break;
+    case 'multiply':
+      result = {result : numbers.reduce((a,b)=>a*b)};
+      break;
+    case 'double':
+      result = {result :numbers.map(number => number *2)};
+      break;
+    default:
+      result = {"error": "Please provide what to do with the numbers!"};
+  }
+  res.send(result);
+});
+
 app.listen(PORT, () => {
   console.log(`The server is up and running on ${PORT}`);
 });
